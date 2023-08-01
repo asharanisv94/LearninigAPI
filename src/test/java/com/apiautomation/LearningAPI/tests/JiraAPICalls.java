@@ -32,7 +32,6 @@ public class JiraAPICalls {
 				.extract().response();
 
 		JsonPath jsonPath = response.jsonPath();
-
 		System.out.println("projectId: " + jsonPath.get("projects[0].id"));
 		context.setAttribute("projectId", jsonPath.get("projects[0].id"));//// The test context allows you to pass data
 																			//// between different test methods within
